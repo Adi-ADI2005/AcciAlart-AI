@@ -39,7 +39,7 @@ This helps emergency teams and analysts make **data-driven decisions quickly.**
   ![](/docs/home.png)
 
 - Prediction Page  
-  ![](/docs/Prediction.png)
+  ![](/docs/predection.png)
 
 - Result Page  
   ![](/docs/result.png)
