@@ -130,10 +130,7 @@ http://127.0.0.1:5000/
 
 ## 💡 Use Cases
 
-- 🚑 Emergency response planning
-- 🚦 Road-safety analytics
-- 🧮 Accident risk prediction
-- 🏙 Smart-city traffic management
+- Accident severity and causality Prediction 
 
 ---
 
