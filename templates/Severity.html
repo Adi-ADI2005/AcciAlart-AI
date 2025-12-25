@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AcciAlert-AI</title>
+    <link rel="webside icon" type="png" href="static/assets/logo.png">
+<style>
+
+/* ===== GLOBAL PAGE STYLE ===== */
+{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
+    body {
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: url('/static/assets/reg.jpg') no-repeat center center/cover;
+      position:relative;
+    }
+    /* Transparent overlay on background */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* change opacity here */
+  z-index: 0;
+}
+
+/* Make all content appear above overlay */
+* {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    color:white;
+    backckground:rgba(0,0,0,0.9)
+    box-shadow: 0px 4px 14px rgba(0,0,0,0.15);
+}
+
+/* ===== HEADING ===== */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+/* ===== GRID: 3 ITEMS DESKTOP / 2 ITEMS MOBILE ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Mobile view - 2 per row */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== INDIVIDUAL FORM BOX ===== */
+.box {
+    text-align: center;
+}
+
+/* ===== LABEL ===== */
+label {
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* ===== SELECT STYLE ===== */
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    background: #fafafa;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+select:focus {
+    border-color: #007bff;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,123,255,0.4);
+    outline: none;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    background: #007bff;
+    color: white;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* space between buttons */
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 55px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background: #28a745; /* green */
+}
+
+.submit-btn:hover {
+    background: #1f7a33;
+}
+
+.back-btn {
+    background: #d9534f; /* red */
+}
+
+.back-btn:hover {
+    background: #b52b27;
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<h2>Predict Severity</h2>
+
+<form action="/predict_severity" method="post">
+
+<div class="grid">
+
+<!-- 1 -->
+<div class="box">
+<label>Area Accident Occurred</label>
+<select name="area_accident_occurred" required>
+    <option value="" disabled selected hidden>Select</option>
+    <option>Residential areas</option>
+    <option>Office areas</option>
+    <option>Recreational areas</option>
+    <option>Industrial areas</option>
+    <option>Other</option>
+    <option>Church areas</option>
+    <option>Market areas</option>
+    <option>Rural village areas</option>
+    <option>Outside rural areas</option>
+    <option>Hospital areas</option>
+    <option>School areas</option>
+</select>
+</div>
+
+<!-- 2 -->
+<div class="box">
+<label>Lanes or Medians</label>
+<select name="lanes_or_medians" required>
+    <option value="" disabled selected hidden>Select</option>
+    <option>Two-way (divided)</option>
+    <option>Undivided Two way</option>
+    <option>Other</option>
+    <option>Double carriageway</option>
+    <option>One way</option>
+    <option>Two-way</option>
+</select>
+</div>
+
+<!-- 3 -->
+<div class="box">
+<label>Road Alignment</label>
+<select name="road_alignment" required>
+    <option value="" disabled selected hidden>Select</option>
+    <option>Tangent road with flat terrain</option>
+    <option>Mild grade</option>
+    <option>Escarpments</option>
+    <option>Rolling terrain</option>
+    <option>Gentle curve</option>
+    <option>Mountainous terrain</option>
+    <option>Steep downward</option>
+    <option>Sharp curve</option>
+    <option>Steep upward</option>
+</select>
+</div>
+
+<!-- 4 -->
+<div class="box">
+<label>Types of Junction</label>
+<select name="types_of_junction" required>
+    <option value="" disabled selected hidden>Select</option>
+    <option>No junction</option>
+    <option>Y Shape</option>
+    <option>Crossing</option>
+    <option>O Shape</option>
+    <option>Other</option>
+    <option>T Shape</option>
+    <option>X Shape</option>
+</select>
+</div>
+
+<!-- 5 -->
+<div class="box">
+<label>Road Surface Type</label>
+<select name="road_surface_type" required>
+    <option value="" disabled selected hidden>Select</option>
+    <option>Asphalt roads</option>
+    <option>Earth roads</option>
+    <option>Asphalt with distress</option>
+    <option>Gravel roads</option>
+    <option>Other</option>
+</select>
+</div>
+
+<!-- 6 -->
+<div class="box">
+<label>Road Surface Conditions</label>
+<select name="road_surface_conditions" required>
+    <option value="" disabled selected hidden>Select</option>
+    <option>Dry</option>
+    <option>Wet or damp</option>
+    <option>Snow</option>
+    <option>Flood over 3cm</option>
+</select>
+</div>
+
+<!-- 7 -->
+<div class="box">
+<label>Light Conditions</label>
+<select name="light_conditions" required>
+    <option value="" disabled selected hidden>Select</option>
+    <option>Daylight</option>
+    <option>Lights lit</option>
+    <option>No lighting</option>
+    <option>Lights unlit</option>
+</select>
+</div>
+
+<!-- 8 -->
+<div class="box">
+<label>Type of Collision</label>
+<select name="type_of_collision" required>
+    <option value="" disabled selected hidden>Select</option>
+    <option>Collision with parked vehicles</option>
+    <option>Vehicle with vehicle</option>
+    <option>Collision with objects</option>
+    <option>Collision with animals</option>
+    <option>Other</option>
+    <option>Rollover</option>
+    <option>Fall from vehicles</option>
+    <option>Collision with pedestrians</option>
+    <option>With Train</option>
+</select>
+</div>
+
+<!-- 9 -->
+<div class="box">
+<label>Number of Vehicles Involved</label>
+<select name="number_of_vehicles_involved" required>
+    <option value="" disabled selected hidden>Select</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>6</option>
+    <option>7</option>
+</select>
+</div>
+
+</div> <!-- end grid -->
+
+<div class="btn-container">
+    <div class="btn-row">
+        <button type="submit" class="btn submit-btn">Submit</button>
+        <a href="/index" class="btn back-btn">⬅ Back to Home</a>
+    </div>
+</div>
+
+
+</form>
+</div>
+
+</body>
+</html>
