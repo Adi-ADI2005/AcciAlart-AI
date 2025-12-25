@@ -35,4 +35,17 @@ The application provides a complete user workflow including authentication, pred
 ---
 
 ## 📂 Project Structure
-
+AcciAlert-AI/
+│
+├── static/ # CSS, JS, Images
+├── templates/ # HTML Pages
+│ ├── register.html
+│ ├── login.html
+│ ├── home.html
+│ ├── prediction.html
+│ └── result.html
+│
+├── model/ # Trained ML model files
+├── app.py # Main Flask application
+├── requirements.txt # Dependencies
+└── README.md # Documentation
