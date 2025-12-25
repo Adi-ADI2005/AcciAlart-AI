@@ -130,7 +130,7 @@ http://127.0.0.1:5000/
 
 ## 💡 Use Cases
 
-- Accident severity and causality Prediction 
+- Accident Severity and Casualty Prediction 
 
 ---
 
