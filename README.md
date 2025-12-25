@@ -16,12 +16,16 @@ The application provides a complete user workflow including authentication, pred
 
 ## ✨ Features
 
-- 🔐 User Registration & Login  
-- 🏠 Home Page Dashboard  
-- 📊 Accident Severity Prediction  
-- 🧑‍⚕️ Casualty Prediction  
-- 📈 Result & Analysis Page  
-- 🤖 AI/ML-Based Prediction Model  
+- 🔐 User Registration
+  [Registration Page](/docs/reg.png)
+- 🔐 User Login
+  [Login Page](/docs/login.png)
+- 🏠 Home Page Dashboard
+  [Home Page](/docs/home.png) 
+- 📊 Accident Severity Prediction
+  [Predection Page](/docs/Predection.png)
+- 🧑‍⚕️ Casualty Prediction result
+  [result Page](/docs/result.png)
 
 ---
 
@@ -51,3 +55,61 @@ AcciAlert-AI/
 ├── requirements.txt # Dependencies
 └── README.md # Documentation
 ~~~
+
+
+
+---
+
+## 🧠 How It Works
+
+1. User registers and logs into the system  
+2. Accident-related inputs are provided  
+3. AI model processes the data  
+4. Accident severity and casualty risk are predicted  
+5. Results are displayed on the result page  
+
+---
+
+📌 Use Cases
+
+Emergency response planning
+
+Road safety analysis
+
+Accident risk prediction
+
+Smart city traffic systems
+
+🔮 Future Enhancements
+
+Real-time accident detection
+
+GPS and IoT integration
+
+Automatic emergency alerts
+
+Mobile application support
+
+👨‍💻 Author
+
+Aditya Mishra
+
+
+## 🚀 Installation & Setup
+
+```bash
+git clone https://github.com/Adi-ADI2005/AcciAlert-AI.git
+cd AcciAlert-AI
+pip install -r requirements.txt
+python app.py
+
+
+
+## 🚀 Installation & Setup
+
+```bash
+git clone https://github.com/your-username/AcciAlert-AI.git
+cd AcciAlert-AI
+pip install -r requirements.txt
+python app.py
+
