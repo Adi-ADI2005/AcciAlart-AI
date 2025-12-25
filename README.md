@@ -1,68 +1,53 @@
-# 🚨 AcciAlert-AI — Intelligent Accident Severity & Casualty Prediction System
+# 🚨 AcciAlert-AI — Accident Severity & Casualty Prediction System
 
-AcciAlert-AI is an AI-powered accident analysis system that predicts **accident severity** and **casualty impact** based on key accident parameters. The system supports **faster emergency response, early assessment, and safety planning.**
+AcciAlert-AI is an AI-powered accident analysis system that predicts **accident severity** and **casualty impact** using machine-learning techniques.  
+It supports **faster emergency response, early risk assessment, and safety planning**.
 
 ---
 
-## ⭐ Features
+## ✨ Features
 
-- 🔐 Secure User Registration & Login
+- 🔐 User Registration & Login (MongoDB Auth)
 - 🏠 User Dashboard
 - 📊 Accident Severity Prediction
 - 🧑‍⚕️ Casualty Risk Analysis
+- 🧠 ML-Model Powered Backend
 - 📈 Result Visualization
-- 🧠 ML-powered backend
-- 🗄️ MongoDB user database
+- 🗄️ MongoDB User History Support
 
 ---
 
-## 🧠 Overview
+## 🧠 Prediction Capabilities
 
-The system uses machine-learning models to predict:
+The system predicts:
 
-- 🚦 Severity level of accident  
-- 🩺 Possible casualty impact  
+- 🚦 Accident Severity Level  
+- 🩺 Casualty Risk / Impact  
 
-This helps emergency teams and analysts make **data-driven decisions quickly.**
+The ML model is trained on accident dataset features such as:
 
----
-
-## 🖼 Application Screenshots
-
-- Registration  
-  ![](/docs/reg.png)
-
-- Login  
-  ![](/docs/login.png)
-
-- Dashboard  
-  ![](/docs/home.png)
-
-- Prediction Page  
-  ![](/docs/Prediction.png)
-
-- Result Page  
-  ![](/docs/result.png)
+- Number of vehicles involved  
+- Number of casualties  
+- Weather condition  
+- Road surface condition  
 
 ---
 
 ## 🛠 Tech Stack
 
-### Frontend
-- HTML
-- CSS
-- JavaScript
+**Frontend**
+- HTML, CSS, JavaScript
 
-### Backend
-- Python — Flask
+**Backend**
+- Python (Flask)
 
-### Machine Learning
-- Scikit-learn
-- SMOTE
-- Pandas
-- NumPy
+**Machine Learning**
+- Scikit-learn  
+- Pandas  
+- NumPy  
+- SMOTE (for resampling)
 
-### Database
+**Database**
 - MongoDB
 
 ---
@@ -72,18 +57,18 @@ This helps emergency teams and analysts make **data-driven decisions quickly.**
 ```
 AcciAlert-AI/
 │
-├── static/                  # CSS, JS, Images
-├── templates/               # UI Pages
+├── static/               # CSS, JS, Images
+├── templates/            # HTML Pages
 │   ├── register.html
 │   ├── login.html
 │   ├── home.html
 │   ├── prediction.html
 │   └── result.html
 │
-├── RTA.csv                  # Dataset
-├── model.pkl                # Trained ML Model
-├── app.py                   # Flask Application
-├── requirements.txt         # Dependencies
+├── RTA.csv               # Dataset
+├── model.pkl             # Trained ML Model
+├── app.py                # Flask Application
+├── requirements.txt      # Dependencies
 └── README.md
 ```
 
@@ -91,23 +76,30 @@ AcciAlert-AI/
 
 ## 🚀 Installation & Setup
 
-### 1️⃣ Clone the repository
+### 1️⃣ Clone the Repository
+
 ```bash
 git clone https://github.com/Adi-ADI2005/AcciAlert-AI.git
 cd AcciAlert-AI
 ```
 
-### 2️⃣ Install dependencies
+### 2️⃣ Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Run the Flask server
+### 3️⃣ Train / Load ML Model (optional)
+
+If you modify dataset or features, retrain the model and save `model.pkl`.
+
+### 4️⃣ Run the Application
+
 ```bash
 python app.py
 ```
 
-App will be available at:
+App runs at:
 
 ```
 http://127.0.0.1:5000/
@@ -115,35 +107,36 @@ http://127.0.0.1:5000/
 
 ---
 
-## 🧠 How It Works
+## 🧠 Workflow
 
-1️⃣ User registers and logs in  
-2️⃣ Enters accident related inputs  
-3️⃣ ML model processes the data  
+1️⃣ User registers & logs in  
+2️⃣ Enters accident-related parameters  
+3️⃣ ML model processes inputs  
 4️⃣ System predicts:
-- accident severity  
-- casualty impact  
 
-5️⃣ Results are displayed to user  
+- Accident Severity  
+- Casualty Risk Level  
+
+5️⃣ Results displayed on result page
 
 ---
 
-## 💡 Use Cases
+## 📌 Use Cases
 
-- 🚑 Emergency response planning
-- 🚦 Road-safety analytics
-- 🧮 Accident risk prediction
-- 🏙 Smart-city traffic management
+- 🚑 Emergency Response Planning  
+- 🛣 Road Safety Analytics  
+- 🧮 Accident Risk Assessment  
+- 🏙 Smart City Traffic Systems  
 
 ---
 
 ## 🔮 Future Enhancements
 
 - Real-time accident detection
-- GPS & IoT integration
-- Automatic SOS alerting
-- Android/iOS App
-- Advanced analytics dashboard
+- GPS / IoT integration
+- Automatic emergency alerting
+- Mobile app support
+- Admin analytics dashboard
 
 ---
 
@@ -151,6 +144,7 @@ http://127.0.0.1:5000/
 
 **Aditya Mishra**
 
-If you like this project, don’t forget to ⭐ star the repo!
+⭐ If you found this project useful — consider starring the repo!
 
 ---
+
