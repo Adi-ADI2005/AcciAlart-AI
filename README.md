@@ -35,7 +35,8 @@ The application provides a complete user workflow including authentication, pred
 ---
 
 ## 📂 Project Structure
-~~~AcciAlert-AI/
+~~~
+AcciAlert-AI/
 │
 ├── static/ # CSS, JS, Images
 ├── templates/ # HTML Pages
