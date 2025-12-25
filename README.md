@@ -46,7 +46,7 @@ AcciAlert-AI/
 │ ├── prediction.html
 │ └── result.html
 │
-├── model/ # Trained ML model files
+├── RTA.csv
 ├── app.py # Main Flask application
 ├── requirements.txt # Dependencies
 └── README.md # Documentation
