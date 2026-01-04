@@ -81,7 +81,6 @@ AcciAlert-AI/
 │   └── result.html
 │
 ├── RTA.csv                  # Dataset
-├── model.pkl                # Trained ML Model
 ├── app.py                   # Flask Application
 ├── requirements.txt         # Dependencies
 └── README.md
